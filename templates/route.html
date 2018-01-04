@@ -1,0 +1,28 @@
+ <!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=vt323" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='base.css') }}">
+    <title>mta train times</title>
+  </head>
+  <body>
+    {% for name in data %}
+    <li><h1>{{name.name}}</h1></li>
+      {% for direction in name.N %}
+      Northbound
+      {{direction.time | timeago}}
+      <br>
+      {% endfor %}
+      ---
+      <br>
+      {% for direction in name.S %}
+      Southbound
+      {{direction.time | timeago}}
+      <br>
+      {% endfor %}
+    {% endfor %}
+  </body>
+</html>
+
+

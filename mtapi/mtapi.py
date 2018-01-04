@@ -1,7 +1,7 @@
 import urllib2, contextlib, datetime, copy
 from collections import defaultdict
 from operator import itemgetter
-import csv, math, json
+import math, json
 import threading
 import logging
 import google.protobuf.message

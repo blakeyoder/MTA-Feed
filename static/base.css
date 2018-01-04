@@ -1,0 +1,7 @@
+body {
+  background-color: black;
+  color: #00FF00;
+  font-family: 'VT323', monospace;
+  max-width: 500px;
+  margin: auto;
+}
