@@ -15,7 +15,7 @@ from flask.json import JSONEncoder
 from datetime import datetime
 from functools import wraps
 import jinja2
-import ago
+import arrow
 import logging
 import os
 
@@ -28,7 +28,8 @@ app.config.update(
 )
 
 def timeago(dt):
-    return ago.human(dt)
+    dt = arrow.get(dt)
+    return dt.humanize()
 
 app.jinja_env.filters['timeago'] = timeago
 

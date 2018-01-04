@@ -1,5 +1,6 @@
-ago==0.0.92
 argcomplete==1.9.2
+arrow==0.12.0
+backports.functools-lru-cache==1.2.1
 base58==0.2.4
 boto3==1.5.8
 botocore==1.8.22
