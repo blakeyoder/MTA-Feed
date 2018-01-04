@@ -5,3 +5,8 @@ body {
   max-width: 500px;
   margin: auto;
 }
+
+.route {
+  color: #00FF00;
+  font-size: 32px;
+}

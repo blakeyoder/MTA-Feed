@@ -1,0 +1,10 @@
+{
+    "dev": {
+        "app_function": "app.app", 
+        "aws_region": "us-east-1", 
+        "profile_name": "zappa-deploy", 
+        "project_name": "mta-feed", 
+        "runtime": "python2.7", 
+        "s3_bucket": "zappa-02w6ag1kk"
+    }
+}
