@@ -1,17 +1,16 @@
- <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=vt323" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='base.css') }}">
-    <title>mta train times</title>
-  </head>
-  <body>
-    {% for route in data.data %}
+{% extends "base.html" %}
+{% block content %}
+{% for route in data.data %}
+  {% if loop.index0 % 3 == 0 %}
+  <div class="row">
+  {% endif %}
+  <div class="col-md-4 col-sm-4 col-xs-4" align="center">
     <a class="route" href={{ url_for('.route', route=route) }} >{{ route }}</a>
-    {% endfor %}
-    <br>
-    last updated at: {{ data.updated }}
-  </body>
-</html>
-
+  </div>
+  {% if loop.index0 % 3 == 2 or loop.last %}
+  </div>
+  {% endif %}
+{% endfor %}
+  <br>
+  last updated at: {{ data.updated }}
+{% endblock %}

@@ -1,30 +1,27 @@
- <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=vt323" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='base.css') }}">
-    <title>mta train times</title>
-  </head>
-  <body>
-    {% for name in data %}
-    <li><h1>{{name.name}}</h1></li>
-      {% for direction in name.N %}
-      Northbound
-      {{direction.route}}
-      {{direction.time | timeago}}
-      <br>
-      {% endfor %}
-      ---
-      <br>
-      {% for direction in name.S %}
-      Southbound
-      {{direction.route}}
-      {{direction.time | timeago}}
-      <br>
-      {% endfor %}
-    {% endfor %}
-  </body>
-</html>
+{% extends "base.html" %}
 
-
+{% block content %}
+  {% for name in data %}
+  <div class="row">
+    <div class="col-md-12" align="center">
+      <h1>{{name.name}}</h1>
+      <div class="routes">
+        {% for direction in name.N %}
+        Northbound
+        {{direction.route}}
+        {{direction.time | timeago}}
+        <br>
+        {% endfor %}
+        ---
+        <br>
+        {% for direction in name.S %}
+        Southbound
+        {{direction.route}}
+        {{direction.time | timeago}}
+        <br>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+{% endblock %}
