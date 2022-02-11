@@ -22,7 +22,7 @@ kappa==0.6.0
 lambda-packages==0.19.0
 MarkupSafe==0.23
 placebo==0.8.1
-protobuf==2.5.0
+protobuf==3.15.0
 py==1.4.32
 pytest==3.0.6
 python-dateutil==2.6.1
