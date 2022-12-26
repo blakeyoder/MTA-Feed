@@ -38,6 +38,6 @@ troposphere==2.1.2
 Unidecode==0.4.21
 urllib3==1.22
 Werkzeug==0.12
-wheel==0.30.0
+wheel==0.38.1
 wsgi-request-logger==0.4.6
 zappa==0.45.1
